@@ -3,12 +3,12 @@ import { Quote } from "../App";
 type Props = {
   quotes: Quote[]
 }
-function RightSide({ quotes }: Props) {
+function HomeMain({ quotes }: Props) {
   return (
-    <section className="right-side">
-      <h2>Top 25 different Quotes about Politics:</h2>
+    <>
+    <h2>Top 20 different Quotes about Politics:</h2>
       <ul className="quotes-list">
-        {quotes.map (quote => (<li className="quotes-list__item">
+        {quotes.map (quote => (<li key = {quote.id}className="quotes-list__item">
           <blockquote>
             <p>
              {quote.text}
@@ -18,7 +18,8 @@ function RightSide({ quotes }: Props) {
         </li>))}
         
       </ul>
-    </section>
+    </>
+      
   );
 }
-export default RightSide;
+export default HomeMain;

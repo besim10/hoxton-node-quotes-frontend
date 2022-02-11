@@ -1,6 +1,6 @@
-function LeftSide() {
+function AuthorMain() {
   return (
-    <section className="left-side">
+    <section className="author-main">
       <ul>
         <li>
           <h3>Nelson Mandela</h3>
@@ -35,4 +35,4 @@ function LeftSide() {
     </section>
   );
 }
-export default LeftSide;
+export default AuthorMain;
