@@ -90,6 +90,12 @@ img {
   gap: 3rem;
   margin-top: 1rem;
 }
+.quotes-list a {
+  padding: 2rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+}
 .quotes-list__item {
   color: rgb(0, 0, 0);
   color: white;
@@ -144,4 +150,30 @@ figcaption {
 .quote-container blockquote {
   display: grid;
   gap: 1rem;
+}
+.quote-detail-wrapper {
+  display: grid;
+  margin-top: 1rem;
+  place-content: center;
+}
+.quote-detail-container {
+  width: 400px;
+  display: grid;
+  justify-items: center;
+}
+
+.quote-detail__photo img {
+  border-radius: 1rem;
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+}
+.quote-detail__info {
+  border: 1px solid #1f395a;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.quote-detail__info blockquote {
+  color: #1f395a;
+  font-weight: bold;
 }

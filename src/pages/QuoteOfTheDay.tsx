@@ -14,7 +14,7 @@ function QuoteOfTheDay(){
                 <div className="quote-container day">
                     <blockquote>
                         <p>{quoteOfTheDay?.text}</p>
-                        <figcaption>— {quoteOfTheDay?.name}</figcaption>
+                        <figcaption>— {quoteOfTheDay?.firstName} {quoteOfTheDay?.lastName}</figcaption>
                     </blockquote> 
                 </div>
         </section>)

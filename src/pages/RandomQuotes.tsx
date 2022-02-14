@@ -18,7 +18,7 @@ function RandomQuotes(){
                 <div className="quote-container">
                 <blockquote>
                     <p>{randomQuote?.text}</p>
-                    <figcaption>— {randomQuote?.name}</figcaption>
+                    <figcaption>— {randomQuote?.firstName} {randomQuote?.lastName}</figcaption>
                 </blockquote> 
             </div>
             ): null}

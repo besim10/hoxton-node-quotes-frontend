@@ -4,11 +4,15 @@ import Header from "./components/Header";
 import Authors from "./pages/Authors";
 import Home from "./pages/Home";
 import QuoteOfTheDay from "./pages/QuoteOfTheDay";
+import QuotesDetail from "./pages/QuotesDetail";
 import RandomQuotes from "./pages/RandomQuotes";
 
 export type Quote ={
   id: number
-  name: string
+  firstName: string
+  lastName: string
+  photo: string
+  age: number
   text: string
 }
 
@@ -28,8 +32,9 @@ function App() {
       <Header />
       <Routes>
         <Route path ='/' element = {<Home quotes={quotes} />} />
-        <Route path ='/home' element = {<Home quotes={quotes} />} />
-        <Route index element={<Navigate to="/home" />} />
+        <Route path ='/quotes' element = {<Home quotes={quotes} />} />
+        <Route path ='/quotes/:id' element = {<QuotesDetail />} />
+        <Route index element={<Navigate to="/quotes" />} />
         <Route path ='/authors' element = {<Authors />} />
         <Route path ='/random-quotes' element = {<RandomQuotes />} />
         <Route path ='/quote-of-the-day' element = {<QuoteOfTheDay />} />
