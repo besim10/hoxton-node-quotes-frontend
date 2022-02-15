@@ -177,3 +177,28 @@ figcaption {
   color: #1f395a;
   font-weight: bold;
 }
+.post-a-quote {
+  border: 1px solid #1f395a;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.post-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.post-a-quote input {
+  border: none;
+  padding: 0.5rem 0.2rem;
+  border-radius: 5px;
+  outline: 1px solid #1f395a;
+}
+.post-a-quote button {
+  background-color: #1f395a;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  outline: 1px solid #1f395a;
+  padding: 0.5rem;
+}

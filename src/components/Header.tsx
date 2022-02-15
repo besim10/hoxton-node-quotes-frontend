@@ -13,7 +13,8 @@ function Header(){
                 <NavLink to = '/quotes'><li className="menu-bar__list__item">Home</li></NavLink>
                 <NavLink to='/authors'><li className="menu-bar__list__item">Authors</li></NavLink>
                 <NavLink to ='/random-quotes'><li className="menu-bar__list__item">Random Quotes</li></NavLink>
-                <NavLink to ='/Quote-of-the-day'><li className="menu-bar__list__item">Quote of the day</li></NavLink>
+                <NavLink to ='/quote-of-the-day'><li className="menu-bar__list__item">Quote of the day</li></NavLink>
+                <NavLink to ='/post-a-quote'><li className="menu-bar__list__item">Post a quote</li></NavLink>
             </ul>
             </nav>
       </header>

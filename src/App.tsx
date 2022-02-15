@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Authors from "./pages/Authors";
 import Home from "./pages/Home";
+import PostAQuote from "./pages/PostAQuote";
 import QuoteOfTheDay from "./pages/QuoteOfTheDay";
 import QuotesDetail from "./pages/QuotesDetail";
 import RandomQuotes from "./pages/RandomQuotes";
@@ -38,6 +39,7 @@ function App() {
         <Route path ='/authors' element = {<Authors />} />
         <Route path ='/random-quotes' element = {<RandomQuotes />} />
         <Route path ='/quote-of-the-day' element = {<QuoteOfTheDay />} />
+        <Route path ='/post-a-quote' element = {<PostAQuote />} />
       </Routes> 
     </div>
   )
