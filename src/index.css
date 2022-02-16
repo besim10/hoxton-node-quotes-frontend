@@ -14,12 +14,14 @@ img {
   border-bottom: 2px solid #1f395a;
   width: 100%;
   display: grid;
+  place-items: center;
   gap: 2rem;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto auto;
 }
-.logo {
+.logo a {
   display: grid;
   grid-auto-flow: column;
+  text-decoration: none;
   align-items: center;
 }
 .header img {
@@ -27,6 +29,12 @@ img {
 }
 .logo h1 {
   color: #1f395a;
+}
+.search input {
+  padding: 0.6rem 1rem;
+  outline: 1px solid #1f395a;
+  border-radius: 2rem;
+  border: none;
 }
 .menu-bar {
   display: grid;

@@ -19,18 +19,19 @@ export type Quote ={
 
 function App() {
   const [quotes,setQuotes] = useState<Quote[]>([])
+  const [search, setSearch] = useState('')
 
   useEffect(()=>{
-    fetch('http://localhost:8000/quotes')
+    fetch(`http://localhost:8000/quotes?search=${search}`)
     .then(resp => resp.json())
     .then(quotesFromServer => {
-      setQuotes(quotesFromServer)
+      setQuotes(quotesFromServer.reverse())
     })
-  },[])
+  },[search])
  
   return (
     <div className="App">
-      <Header />
+      <Header search= {search} setSearch = {setSearch}/>
       <Routes>
         <Route path ='/' element = {<Home quotes={quotes} />} />
         <Route path ='/quotes' element = {<Home quotes={quotes} />} />
@@ -39,7 +40,7 @@ function App() {
         <Route path ='/authors' element = {<Authors />} />
         <Route path ='/random-quotes' element = {<RandomQuotes />} />
         <Route path ='/quote-of-the-day' element = {<QuoteOfTheDay />} />
-        <Route path ='/post-a-quote' element = {<PostAQuote />} />
+        <Route path ='/post-a-quote' element = {<PostAQuote quotes = {quotes}setQuotes={setQuotes} />} />
       </Routes> 
     </div>
   )

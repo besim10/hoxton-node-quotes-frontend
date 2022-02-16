@@ -1,12 +1,25 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../icons/hoxton-logo.jpg';
 
-function Header(){
+type Props = {
+    search: string
+    setSearch: (value: string) => voids
+}
+function Header({search, setSearch}:Props){
+
     return (
         <header className="header">
             <div className="logo">
-            <img className = 'logo-icon' src={logo}/>
-            <h1>Hoxton Quotes</h1>
+                <NavLink to ='/quotes'>
+                    <img className = 'logo-icon' src={logo}/>
+                    <h1>Hoxton Quotes</h1>
+                </NavLink>
+            </div>
+            <div className='search'>
+                <input onChange={(e) => {
+                    //@ts-ignore
+                    setSearch(e.target.value)
+                }} type="search" name="search" placeholder='Search for quote' />
             </div>
             <nav className="menu-bar">
             <ul className = 'menu-bar__list'>
