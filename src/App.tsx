@@ -15,6 +15,7 @@ export type Quote ={
   photo: string
   age: number
   text: string
+  likes: number
 }
 
 function App() {
@@ -31,10 +32,10 @@ function App() {
  
   return (
     <div className="App">
-      <Header search= {search} setSearch = {setSearch}/>
+      <Header setSearch = {setSearch}/>
       <Routes>
-        <Route path ='/' element = {<Home quotes={quotes} />} />
-        <Route path ='/quotes' element = {<Home quotes={quotes} />} />
+        <Route path ='/' element = {<Home quotes={quotes} setQuotes = {setQuotes} />} />
+        <Route path ='/quotes' element = {<Home quotes={quotes} setQuotes = {setQuotes}/>} />
         <Route path ='/quotes/:id' element = {<QuotesDetail />} />
         <Route index element={<Navigate to="/quotes" />} />
         <Route path ='/authors' element = {<Authors />} />

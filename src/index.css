@@ -98,15 +98,32 @@ img {
   gap: 3rem;
   margin-top: 1rem;
 }
-.quotes-list a {
-  padding: 2rem;
+.quotes-list__item a {
+  text-decoration: none;
+  color: white;
+}
+
+.quotes-list__item {
+  color: white;
   border: 1px solid white;
   border-radius: 5px;
-  text-decoration: none;
+  padding: 1rem;
+  position: relative;
 }
-.quotes-list__item {
-  color: rgb(0, 0, 0);
+.quotes-list__item .heart {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.quotes-list__item button {
+  position: absolute;
+  right: 5px;
+  border: none;
+  cursor: pointer;
   color: white;
+  font-size: 1.2rem;
+  background: none;
+  top: 0;
+  z-index: 20;
 }
 figcaption {
   text-align: right;
@@ -200,6 +217,9 @@ figcaption {
   padding: 0.5rem 0.2rem;
   border-radius: 5px;
   outline: 1px solid #1f395a;
+}
+.post-a-quote textarea {
+  resize: vertical;
 }
 .post-a-quote button {
   background-color: #1f395a;

@@ -51,7 +51,7 @@ function PostAQuote({quotes, setQuotes}: Props){
                     <input name='age' type= 'number' placeholder='Age:' required/>
                     <textarea name="quote" id="quote" cols={30} rows={10} placeholder = 'Quote:'required></textarea>
                     <button type="submit">Submit</button>
-                </form>
+                </form> 
             </div>
         </section>
     )

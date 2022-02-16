@@ -2,10 +2,9 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../icons/hoxton-logo.jpg';
 
 type Props = {
-    search: string
-    setSearch: (value: string) => voids
+    setSearch: (value: string) => void
 }
-function Header({search, setSearch}:Props){
+function Header({setSearch}:Props){
 
     return (
         <header className="header">
